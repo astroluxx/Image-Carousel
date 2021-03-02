@@ -14,7 +14,7 @@ document.querySelector('.carousel').addEventListener('click', function (evt){ //
         // }
         } else if (evt.target.classList.contains('prev')){
             if (currentImg < 0) {//added this code to prevent it from decrementing lower than 0.
-                currentImg = images.length - 1;
+                currentImg = images.length //- 1;
             } //else {
             currentImg -= 1;
         // }
