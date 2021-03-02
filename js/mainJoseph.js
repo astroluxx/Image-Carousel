@@ -2,9 +2,6 @@ let images = ['mountain1.jpg', 'mountain2.jpg', 'mountain3.jpg']; //creates an a
 let currentImg = 0; //initializes the current image to be the first element in the array.
 document.querySelector('.carousel>img').src = 'images/' + images[0]; //selects the img within the 'carousel' class and adds 'images/mountain1.jpg' to the empty src.
 
-console.log(images.length);
-
-
 document.querySelector('.carousel').addEventListener('click', function (evt){ //
     if (evt.target.classList.contains('control')) {
         if (evt.target.classList.contains('next')) {
@@ -20,4 +17,9 @@ document.querySelector('.carousel').addEventListener('click', function (evt){ //
         }
         document.querySelector('.carousel>img').src = 'images/' + images[currentImg];
     }
+		
+	console.log("currentImg: " + currentImg);
+	console.log("images: " + images[currentImg]);
 });
+
+//Goal: find a way to make it loop back to the highest value in the array when you hit previous & vice-versa for the next button instead of preventing it to decrement/ increment
